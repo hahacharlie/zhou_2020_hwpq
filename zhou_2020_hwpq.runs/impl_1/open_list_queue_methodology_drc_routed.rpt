@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1.1 (win64) Build 5094488 Fri Jun 14 08:59:21 MDT 2024
-| Date         : Thu Aug  1 14:10:15 2024
+| Date         : Mon Aug  5 10:21:32 2024
 | Host         : QIHANGWUFDE9 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file open_list_queue_methodology_drc_routed.rpt -pb open_list_queue_methodology_drc_routed.pb -rpx open_list_queue_methodology_drc_routed.rpx
 | Design       : open_list_queue

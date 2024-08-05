@@ -6,8 +6,14 @@
 # Clock signal
 set_property PACKAGE_PIN W5 [get_ports CLK]							
 	set_property IOSTANDARD LVCMOS33 [get_ports CLK]
-	create_clock -name sys_clk -period 10.00 -waveform {0 5} [get_ports CLK]
- 
+	# 120 MHz
+	# create_clock -name sys_clk -period 8.33 [get_ports CLK]
+	# 130 MHz
+	# create_clock -name sys_clk -period 7.69 [get_ports CLK]
+	# 135 MHz
+	create_clock -name sys_clk -period 7.41 [get_ports CLK]
+	# 140 MHz
+	# create_clock -name sys_clk -period 7.14 [get_ports CLK]
 
 # Switches
 # set_property PACKAGE_PIN V17 [get_ports {sw[0]}]					

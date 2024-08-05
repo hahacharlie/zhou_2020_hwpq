@@ -1,0 +1,18 @@
+Time resolution is 1 ps
+Write data:           5
+Write data:           2
+Write data:          11
+Write data:          14
+Write data:          10
+Write data:           3
+Write data:           7
+Write data:           1
+Read data:          1
+Read data:          2
+Read data:          3
+Read data:          5
+Read data:          7
+Read data:         10
+Read data:         11
+Read data:         14
+$finish called at time : 425 ns : File "//psf/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/sim_1/imports/my_hwpq/tb_open_list_queue.sv" Line 92

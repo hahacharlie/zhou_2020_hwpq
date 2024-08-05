@@ -85,6 +85,8 @@ read_xdc C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs
 set_property used_in_implementation false [get_files C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/utils_1/imports/synth_1/open_list_queue.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

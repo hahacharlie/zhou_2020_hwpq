@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../zhou_2020_hwpq.srcs/sources_1/imports/my_hwpq/open_list_queue.sv" \
+"../../../../zhou_2020_hwpq.srcs/sim_1/imports/my_hwpq/tb_open_list_queue.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

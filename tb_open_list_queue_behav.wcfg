@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_open_list_queue_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_open_list_queue" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="415.218 ns"></ZoomEndTime>
+      <Cursor1Time time="255.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="533"></NameColumnWidth>
+      <ValueColumnWidth column_width="259"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/tb_open_list_queue/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/RSTn" type="logic">
+      <obj_property name="ElementShortName">RSTn</obj_property>
+      <obj_property name="ObjectShortName">RSTn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/i_wrt" type="logic">
+      <obj_property name="ElementShortName">i_wrt</obj_property>
+      <obj_property name="ObjectShortName">i_wrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/i_read" type="logic">
+      <obj_property name="ElementShortName">i_read</obj_property>
+      <obj_property name="ObjectShortName">i_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/i_valid" type="logic">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/i_node_f" type="array">
+      <obj_property name="ElementShortName">i_node_f[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_node_f[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_ready_deq" type="logic">
+      <obj_property name="ElementShortName">o_ready_deq</obj_property>
+      <obj_property name="ObjectShortName">o_ready_deq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_ready_enq" type="logic">
+      <obj_property name="ElementShortName">o_ready_enq</obj_property>
+      <obj_property name="ObjectShortName">o_ready_enq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_ready_rep" type="logic">
+      <obj_property name="ElementShortName">o_ready_rep</obj_property>
+      <obj_property name="ObjectShortName">o_ready_rep</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_full" type="logic">
+      <obj_property name="ElementShortName">o_full</obj_property>
+      <obj_property name="ObjectShortName">o_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_empty" type="logic">
+      <obj_property name="ElementShortName">o_empty</obj_property>
+      <obj_property name="ObjectShortName">o_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/o_node_f" type="array">
+      <obj_property name="ElementShortName">o_node_f[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_node_f[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/QUEUE_SIZE" type="array">
+      <obj_property name="ElementShortName">QUEUE_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">QUEUE_SIZE[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/MAP_WIDTH" type="array">
+      <obj_property name="ElementShortName">MAP_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAP_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_open_list_queue/MAP_HEIGHT" type="array">
+      <obj_property name="ElementShortName">MAP_HEIGHT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAP_HEIGHT[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
