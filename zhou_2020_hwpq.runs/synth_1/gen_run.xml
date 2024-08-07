@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1722867344" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/open_list_queue.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1723007365" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/open_list_queue.dcp">
   <File Type="PA-TCL" Name="open_list_queue.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="open_list_queue_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="open_list_queue_reports.tcl"/>
@@ -37,6 +37,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/Basys3_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1.1 (win64) Build 5094488 Fri Jun 14 08:59:21 MDT 2024
-| Date         : Mon Aug  5 10:20:33 2024
+| Date         : Wed Aug  7 01:13:56 2024
 | Host         : QIHANGWUFDE9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file open_list_queue_control_sets_placed.rpt
 | Design       : open_list_queue
@@ -60,10 +60,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             141 |           50 |
+| No           | Yes                   | No                     |             141 |           53 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             160 |           57 |
+| Yes          | Yes                   | No                     |             160 |           63 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,15 +73,15 @@ Table of Contents
 +----------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
 |  Clock Signal  |      Enable Signal      |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
-|  CLK_IBUF_BUFG |                         | FSM_sequential_curr_state_i_1_n_0 |                7 |             13 |         1.86 |
-|  CLK_IBUF_BUFG |                         | inQueue[0][31]_i_1_n_0            |               12 |             32 |         2.67 |
+|  CLK_IBUF_BUFG |                         | FSM_sequential_curr_state_i_1_n_0 |                8 |             13 |         1.62 |
+|  CLK_IBUF_BUFG |                         | inQueue[0][31]_i_1_n_0            |               13 |             32 |         2.46 |
 |  CLK_IBUF_BUFG |                         | inQueue[1][31]_i_1_n_0            |               13 |             32 |         2.46 |
-|  CLK_IBUF_BUFG |                         | inQueue[2][31]_i_1_n_0            |               12 |             32 |         2.67 |
 |  CLK_IBUF_BUFG |                         | inQueue[3][31]_i_1_n_0            |                6 |             32 |         5.33 |
-|  CLK_IBUF_BUFG | nextOutQueue            | outQueue[3][31]_i_1_n_0           |                5 |             32 |         6.40 |
+|  CLK_IBUF_BUFG |                         | inQueue[2][31]_i_1_n_0            |               13 |             32 |         2.46 |
+|  CLK_IBUF_BUFG | nextOutQueue            | outQueue[3][31]_i_1_n_0           |                6 |             32 |         5.33 |
 |  CLK_IBUF_BUFG | outQueue[1][31]_i_2_n_0 | outQueue[1][31]_i_1_n_0           |               11 |             32 |         2.91 |
-|  CLK_IBUF_BUFG | outQueue[2][31]_i_2_n_0 | outQueue[2][31]_i_1_n_0           |               10 |             32 |         3.20 |
-|  CLK_IBUF_BUFG | outQueue[0][31]_i_1_n_0 | FSM_sequential_curr_state_i_1_n_0 |               31 |             64 |         2.06 |
+|  CLK_IBUF_BUFG | outQueue[2][31]_i_2_n_0 | outQueue[2][31]_i_1_n_0           |               11 |             32 |         2.91 |
+|  CLK_IBUF_BUFG | outQueue[0][31]_i_1_n_0 | FSM_sequential_curr_state_i_1_n_0 |               35 |             64 |         1.83 |
 +----------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

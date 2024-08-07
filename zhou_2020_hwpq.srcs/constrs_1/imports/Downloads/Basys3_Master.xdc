@@ -4,16 +4,39 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 # Clock signal
-set_property PACKAGE_PIN W5 [get_ports CLK]							
-	set_property IOSTANDARD LVCMOS33 [get_ports CLK]
-	# 120 MHz
-	# create_clock -name sys_clk -period 8.33 [get_ports CLK]
-	# 130 MHz
-	# create_clock -name sys_clk -period 7.69 [get_ports CLK]
-	# 135 MHz
-	create_clock -name sys_clk -period 7.41 [get_ports CLK]
-	# 140 MHz
-	# create_clock -name sys_clk -period 7.14 [get_ports CLK]
+# set_property PACKAGE_PIN W5 [get_ports CLK]							
+	# set_property IOSTANDARD LVCMOS33 [get_ports CLK]
+
+# set clock period in a variable
+# 50 MHz = 20ns
+# set clock_period 20;
+
+# 100 MHz = 10ns
+# set clock_period 10;
+
+# 120 MHz = 8.33ns
+# set clock_period 8.33
+
+# 130 MHz = 7.69ns
+# set clock_period 7.69
+
+# 135 MHz = 7.41ns
+# set clock_period 7.41;
+
+# 140 MHz = 7.14ns
+set clock_period 7.14
+
+# set the % of clock to limit the IO timing
+set clk_io_pct 0.50;
+
+# create the system clock with name
+create_clock -name sys_clk -period $clock_period [get_ports CLK];
+
+# set the input delay
+set_input_delay -clock sys_clk [expr $clock_period * $clk_io_pct] [get_ports -filter {DIRECTION == IN && NAME !~ "*CLK*"}];
+
+# set output delay
+set_output_delay -clock sys_clk [expr $clock_period * $clk_io_pct] [get_ports -filter {DIRECTION == OUT}];
 
 # Switches
 # set_property PACKAGE_PIN V17 [get_ports {sw[0]}]					

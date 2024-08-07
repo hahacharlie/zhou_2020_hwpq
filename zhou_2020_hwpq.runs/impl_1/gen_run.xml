@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1722867345">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1723007365">
   <File Type="ROUTE-PWR" Name="open_list_queue_power_routed.rpt"/>
   <File Type="PA-TCL" Name="open_list_queue.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="open_list_queue_power_summary_routed.pb"/>
@@ -112,6 +112,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/Basys3_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

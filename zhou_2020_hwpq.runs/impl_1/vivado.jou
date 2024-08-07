@@ -3,8 +3,8 @@
 # SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
 # IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
 # SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
-# Start of session at: Mon Aug  5 10:18:21 2024
-# Process ID: 5044
+# Start of session at: Wed Aug  7 01:11:50 2024
+# Process ID: 7532
 # Current directory: C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.runs/impl_1
 # Command line: vivado.exe -log open_list_queue.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source open_list_queue.tcl -notrace
 # Log file: C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.runs/impl_1/open_list_queue.vdi
@@ -14,11 +14,11 @@
 # Operating System  :22631
 # Processor Detail  :Apple Silicon
 # CPU Frequency     :3200 MHz
-# CPU Physical cores:4
-# CPU Logical cores :4
+# CPU Physical cores:8
+# CPU Logical cores :8
 # Host memory       :8584 MB
-# Swap memory       :2013 MB
-# Total Virtual     :10597 MB
-# Available Virtual :4230 MB
+# Swap memory       :805 MB
+# Total Virtual     :9389 MB
+# Available Virtual :2604 MB
 #-----------------------------------------------------------
 source open_list_queue.tcl -notrace
