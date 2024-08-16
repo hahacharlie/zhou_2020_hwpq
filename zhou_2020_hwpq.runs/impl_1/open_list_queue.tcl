@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.runs/impl_1/open_list_queue.tcl"
+  variable script "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.runs/impl_1/open_list_queue.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,32 +104,14 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
-  set_param runs.launchOptions { -jobs 8  }
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7a35tcpg236-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.cache/wt [current_project]
-  set_property parent.project_path C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.xpr [current_project]
-  set_property ip_output_repo C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.cache/ip [current_project]
+  set_param chipscope.maxJobs 3
+  set_param runs.launchOptions { -jobs 12  }
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.runs/impl_1/open_list_queue.dcp
+  set_property webtalk.parent_dir /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.cache/wt [current_project]
+  set_property parent.project_path /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.xpr [current_project]
+  set_property ip_output_repo /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.runs/synth_1/open_list_queue.dcp
-OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Mac/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "read constraints: implementation_pre" START { }
-OPTRACE "read constraints: implementation_pre" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  link_design -top open_list_queue -part xc7a35tcpg236-1 
-OPTRACE "link_design" END { }
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

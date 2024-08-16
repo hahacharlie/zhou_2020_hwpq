@@ -105,11 +105,11 @@ module open_list_queue #(
     end
 
     // Initialize the comparators
-    lessThanPrevInQueue      = '0;
-    lessThanNextInQueue      = '0;
-    lessThanSameOutQueue     = '0;
-    lessThanNextOutQueue     = '0;
-    lessThanNextNextOutQueue = '0;
+    // lessThanPrevInQueue      = '0;
+    // lessThanNextInQueue      = '0;
+    // lessThanSameOutQueue     = '0;
+    // lessThanNextOutQueue     = '0;
+    // lessThanNextNextOutQueue = '0;
 
     // comparsion for each node in queue
     for (j = 0; j < QUEUE_SIZE; j += 1) begin
