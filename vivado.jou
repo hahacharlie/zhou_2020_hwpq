@@ -3,73 +3,25 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Aug 15 00:27:43 2024
-# Process ID: 367405
+# Start of session at: Fri Aug 16 18:59:27 2024
+# Process ID: 570178
 # Current directory: /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq
-# Command line: vivado -mode tcl
+# Command line: vivado -mode tcl -source clock_frequencies.tcl
 # Log file: /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/vivado.log
 # Journal file: /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/vivado.jou
 # Running On        :archlinux
-# Platform          :Arch
-# Operating System  :Arch Linux
+# Platform          :unknown
+# Operating System  :unknown
 # Processor Detail  :12th Gen Intel(R) Core(TM) i5-12400F
-# CPU Frequency     :4265.730 MHz
+# CPU Frequency     :4203.906 MHz
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :33484 MB
 # Swap memory       :4294 MB
 # Total Virtual     :37779 MB
-# Available Virtual :31758 MB
+# Available Virtual :28157 MB
 #-----------------------------------------------------------
-clear
+source clock_frequencies.tcl
 source clock_frequencies.tcl 
 source clock_frequencies.tcl
 source clock_frequencies.tcl
-clear
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-close_project 
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-close_project 
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-close_project
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-source clock_frequencies.tcl
-clear
