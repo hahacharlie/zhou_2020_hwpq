@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Fri Aug 16 20:15:09 2024
-| Host         : archlinux running 64-bit unknown
+| Date         : Tue Aug 20 18:29:06 2024
+| Host         : archlinux running 64-bit Arch Linux
 | Command      : report_utilization -file open_list_queue_utilization_synth.rpt -pb open_list_queue_utilization_synth.pb
 | Design       : open_list_queue
 | Device       : xc7a35tcpg236-1

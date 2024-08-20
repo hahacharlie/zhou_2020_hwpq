@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Fri Aug 16 20:15:42 2024
+| Date         : Tue Aug 20 18:29:39 2024
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_control_sets -verbose -file open_list_queue_control_sets_placed.rpt
 | Design       : open_list_queue
@@ -74,13 +74,13 @@ Table of Contents
 |  Clock Signal  |      Enable Signal      |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
 |  CLK_IBUF_BUFG |                         | FSM_sequential_curr_state_i_1_n_0 |                7 |             13 |         1.86 |
+|  CLK_IBUF_BUFG |                         | inQueue[1][31]_i_1_n_0            |               10 |             32 |         3.20 |
 |  CLK_IBUF_BUFG |                         | inQueue[2][31]_i_1_n_0            |               12 |             32 |         2.67 |
 |  CLK_IBUF_BUFG |                         | inQueue[3][31]_i_1_n_0            |                6 |             32 |         5.33 |
 |  CLK_IBUF_BUFG |                         | inQueue[0][31]_i_1_n_0            |               14 |             32 |         2.29 |
-|  CLK_IBUF_BUFG |                         | inQueue[1][31]_i_1_n_0            |               10 |             32 |         3.20 |
-|  CLK_IBUF_BUFG | outQueue[2][31]_i_2_n_0 | outQueue[2][31]_i_1_n_0           |               11 |             32 |         2.91 |
 |  CLK_IBUF_BUFG | nextOutQueue            | outQueue[3][31]_i_1_n_0           |                6 |             32 |         5.33 |
 |  CLK_IBUF_BUFG | outQueue[1][31]_i_2_n_0 | outQueue[1][31]_i_1_n_0           |               12 |             32 |         2.67 |
+|  CLK_IBUF_BUFG | outQueue[2][31]_i_2_n_0 | outQueue[2][31]_i_1_n_0           |               11 |             32 |         2.91 |
 |  CLK_IBUF_BUFG | outQueue[0][31]_i_1_n_0 | FSM_sequential_curr_state_i_1_n_0 |               38 |             64 |         1.68 |
 +----------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
 

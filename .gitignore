@@ -1,3 +1,5 @@
 .vscode
 chat.rapidgpt
 .Xil
+*.jou
+*.log

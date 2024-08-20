@@ -1,124 +1,144 @@
 Frequency: 50 MHz -> Synthesis: 35 s
 Frequency: 50 MHz -> Implementation: 37 s
 Frequency: 50 MHz -> Power: 0.086 W
+Frequency: 50 MHz -> Used Slice LUTs: 546
+Frequency: 50 MHz -> Used Slice Registers: 301
 Frequency: 50 MHz -> WNS: 9.970 ns
-Frequency: 55 MHz -> Synthesis: 34 s
-Frequency: 55 MHz -> Implementation: 26 s
-Frequency: 55 MHz -> Power: 0.088 W
-Frequency: 55 MHz -> WNS: 8.106 ns
+Frequency: 50 MHz -> Achieved Frequency: 99.70089730807578 MHz
+
+
 Frequency: 60 MHz -> Synthesis: 34 s
 Frequency: 60 MHz -> Implementation: 26 s
 Frequency: 60 MHz -> Power: 0.089 W
+Frequency: 60 MHz -> Used Slice LUTs: 546
+Frequency: 60 MHz -> Used Slice Registers: 301
 Frequency: 60 MHz -> WNS: 7.085 ns
-Frequency: 65 MHz -> Synthesis: 34 s
-Frequency: 65 MHz -> Implementation: 26 s
-Frequency: 65 MHz -> Power: 0.091 W
-Frequency: 65 MHz -> WNS: 5.841 ns
-Frequency: 70 MHz -> Synthesis: 34 s
-Frequency: 70 MHz -> Implementation: 28 s
+Frequency: 60 MHz -> Achieved Frequency: 104.36597669159853 MHz
+
+
+Frequency: 70 MHz -> Synthesis: 28 s
+Frequency: 70 MHz -> Implementation: 25 s
 Frequency: 70 MHz -> Power: 0.092 W
+Frequency: 70 MHz -> Used Slice LUTs: 546
+Frequency: 70 MHz -> Used Slice Registers: 301
 Frequency: 70 MHz -> WNS: 4.858 ns
-Frequency: 75 MHz -> Synthesis: 36 s
-Frequency: 75 MHz -> Implementation: 27 s
-Frequency: 75 MHz -> Power: 0.094 W
-Frequency: 75 MHz -> WNS: 3.902 ns
-Frequency: 80 MHz -> Synthesis: 36 s
-Frequency: 80 MHz -> Implementation: 28 s
+Frequency: 70 MHz -> Achieved Frequency: 106.0702488104979 MHz
+
+
+Frequency: 80 MHz -> Synthesis: 34 s
+Frequency: 80 MHz -> Implementation: 27 s
 Frequency: 80 MHz -> Power: 0.096 W
+Frequency: 80 MHz -> Used Slice LUTs: 546
+Frequency: 80 MHz -> Used Slice Registers: 301
 Frequency: 80 MHz -> WNS: 3.750 ns
-Frequency: 85 MHz -> Synthesis: 36 s
-Frequency: 85 MHz -> Implementation: 27 s
-Frequency: 85 MHz -> Power: 0.097 W
-Frequency: 85 MHz -> WNS: 3.029 ns
+Frequency: 80 MHz -> Achieved Frequency: 114.28571428571429 MHz
+
+
 Frequency: 90 MHz -> Synthesis: 34 s
-Frequency: 90 MHz -> Implementation: 26 s
+Frequency: 90 MHz -> Implementation: 27 s
 Frequency: 90 MHz -> Power: 0.099 W
+Frequency: 90 MHz -> Used Slice LUTs: 546
+Frequency: 90 MHz -> Used Slice Registers: 301
 Frequency: 90 MHz -> WNS: 2.060 ns
-Frequency: 95 MHz -> Synthesis: 33 s
-Frequency: 95 MHz -> Implementation: 26 s
-Frequency: 95 MHz -> Power: 0.100 W
-Frequency: 95 MHz -> WNS: 1.908 ns
+Frequency: 90 MHz -> Achieved Frequency: 110.48367296832802 MHz
+
+
 Frequency: 100 MHz -> Synthesis: 34 s
-Frequency: 100 MHz -> Implementation: 26 s
+Frequency: 100 MHz -> Implementation: 27 s
 Frequency: 100 MHz -> Power: 0.102 W
+Frequency: 100 MHz -> Used Slice LUTs: 546
+Frequency: 100 MHz -> Used Slice Registers: 301
 Frequency: 100 MHz -> WNS: 1.337 ns
-Frequency: 105 MHz -> Synthesis: 34 s
-Frequency: 105 MHz -> Implementation: 28 s
-Frequency: 105 MHz -> Power: 0.104 W
-Frequency: 105 MHz -> WNS: 0.928 ns
+Frequency: 100 MHz -> Achieved Frequency: 115.4334526145677 MHz
+
+
 Frequency: 110 MHz -> Synthesis: 34 s
-Frequency: 110 MHz -> Implementation: 27 s
+Frequency: 110 MHz -> Implementation: 28 s
 Frequency: 110 MHz -> Power: 0.105 W
+Frequency: 110 MHz -> Used Slice LUTs: 546
+Frequency: 110 MHz -> Used Slice Registers: 301
 Frequency: 110 MHz -> WNS: 0.916 ns
-Frequency: 115 MHz -> Synthesis: 34 s
-Frequency: 115 MHz -> Implementation: 28 s
-Frequency: 115 MHz -> Power: 0.107 W
-Frequency: 115 MHz -> WNS: 0.544 ns
+Frequency: 110 MHz -> Achieved Frequency: 122.32551932743205 MHz
+
+
 Frequency: 120 MHz -> Synthesis: 34 s
-Frequency: 120 MHz -> Implementation: 28 s
+Frequency: 120 MHz -> Implementation: 29 s
 Frequency: 120 MHz -> Power: 0.109 W
+Frequency: 120 MHz -> Used Slice LUTs: 547
+Frequency: 120 MHz -> Used Slice Registers: 301
 Frequency: 120 MHz -> WNS: 0.458 ns
-Frequency: 125 MHz -> Synthesis: 34 s
-Frequency: 125 MHz -> Implementation: 26 s
-Frequency: 125 MHz -> Power: 0.111 W
-Frequency: 125 MHz -> WNS: 0.220 ns
-Frequency: 130 MHz -> Synthesis: 34 s
+Frequency: 120 MHz -> Achieved Frequency: 126.97875222212815 MHz
+
+
+Frequency: 130 MHz -> Synthesis: 35 s
 Frequency: 130 MHz -> Implementation: 35 s
 Frequency: 130 MHz -> Power: 0.112 W
+Frequency: 130 MHz -> Used Slice LUTs: 549
+Frequency: 130 MHz -> Used Slice Registers: 301
 Frequency: 130 MHz -> WNS: -0.021 ns
-Frequency: 135 MHz -> Synthesis: 34 s
-Frequency: 135 MHz -> Implementation: 34 s
-Frequency: 135 MHz -> Power: 0.114 W
-Frequency: 135 MHz -> WNS: -0.072 ns
-Frequency: 140 MHz -> Synthesis: 34 s
+Frequency: 130 MHz -> Achieved Frequency: 129.64606623916708 MHz
+
+
+Frequency: 140 MHz -> Synthesis: 36 s
 Frequency: 140 MHz -> Implementation: 35 s
 Frequency: 140 MHz -> Power: 0.116 W
+Frequency: 140 MHz -> Used Slice LUTs: 551
+Frequency: 140 MHz -> Used Slice Registers: 301
 Frequency: 140 MHz -> WNS: -0.512 ns
-Frequency: 145 MHz -> Synthesis: 33 s
-Frequency: 145 MHz -> Implementation: 40 s
-Frequency: 145 MHz -> Power: 0.120 W
-Frequency: 145 MHz -> WNS: -0.574 ns
-Frequency: 150 MHz -> Synthesis: 33 s
-Frequency: 150 MHz -> Implementation: 40 s
+Frequency: 140 MHz -> Achieved Frequency: 130.63601074947746 MHz
+
+
+Frequency: 150 MHz -> Synthesis: 35 s
+Frequency: 150 MHz -> Implementation: 42 s
 Frequency: 150 MHz -> Power: 0.122 W
+Frequency: 150 MHz -> Used Slice LUTs: 565
+Frequency: 150 MHz -> Used Slice Registers: 306
 Frequency: 150 MHz -> WNS: -0.567 ns
-Frequency: 155 MHz -> Synthesis: 34 s
-Frequency: 155 MHz -> Implementation: 38 s
-Frequency: 155 MHz -> Power: 0.123 W
-Frequency: 155 MHz -> WNS: -0.573 ns
+Frequency: 150 MHz -> Achieved Frequency: 138.2424773051933 MHz
+
+
 Frequency: 160 MHz -> Synthesis: 34 s
-Frequency: 160 MHz -> Implementation: 53 s
+Frequency: 160 MHz -> Implementation: 56 s
 Frequency: 160 MHz -> Power: 0.126 W
+Frequency: 160 MHz -> Used Slice LUTs: 579
+Frequency: 160 MHz -> Used Slice Registers: 319
 Frequency: 160 MHz -> WNS: -0.733 ns
-Frequency: 165 MHz -> Synthesis: 34 s
-Frequency: 165 MHz -> Implementation: 49 s
-Frequency: 165 MHz -> Power: 0.129 W
-Frequency: 165 MHz -> WNS: -1.484 ns
-Frequency: 170 MHz -> Synthesis: 34 s
-Frequency: 170 MHz -> Implementation: 40 s
+Frequency: 160 MHz -> Achieved Frequency: 143.204926249463 MHz
+
+
+Frequency: 170 MHz -> Synthesis: 33 s
+Frequency: 170 MHz -> Implementation: 42 s
 Frequency: 170 MHz -> Power: 0.126 W
+Frequency: 170 MHz -> Used Slice LUTs: 568
+Frequency: 170 MHz -> Used Slice Registers: 320
 Frequency: 170 MHz -> WNS: -1.573 ns
-Frequency: 175 MHz -> Synthesis: 34 s
-Frequency: 175 MHz -> Implementation: 43 s
-Frequency: 175 MHz -> Power: 0.127 W
-Frequency: 175 MHz -> WNS: -1.674 ns
+Frequency: 170 MHz -> Achieved Frequency: 134.13181212078175 MHz
+
+
 Frequency: 180 MHz -> Synthesis: 34 s
-Frequency: 180 MHz -> Implementation: 48 s
+Frequency: 180 MHz -> Implementation: 50 s
 Frequency: 180 MHz -> Power: 0.133 W
+Frequency: 180 MHz -> Used Slice LUTs: 576
+Frequency: 180 MHz -> Used Slice Registers: 326
 Frequency: 180 MHz -> WNS: -1.689 ns
-Frequency: 185 MHz -> Synthesis: 34 s
-Frequency: 185 MHz -> Implementation: 42 s
-Frequency: 185 MHz -> Power: 0.134 W
-Frequency: 185 MHz -> WNS: -2.164 ns
-Frequency: 190 MHz -> Synthesis: 35 s
-Frequency: 190 MHz -> Implementation: 50 s
+Frequency: 180 MHz -> Achieved Frequency: 138.03469271943683 MHz
+
+
+Frequency: 190 MHz -> Synthesis: 34 s
+Frequency: 190 MHz -> Implementation: 51 s
 Frequency: 190 MHz -> Power: 0.137 W
+Frequency: 190 MHz -> Used Slice LUTs: 571
+Frequency: 190 MHz -> Used Slice Registers: 313
 Frequency: 190 MHz -> WNS: -1.968 ns
-Frequency: 195 MHz -> Synthesis: 36 s
-Frequency: 195 MHz -> Implementation: 57 s
-Frequency: 195 MHz -> Power: 0.137 W
-Frequency: 195 MHz -> WNS: -1.800 ns
+Frequency: 190 MHz -> Achieved Frequency: 138.29043903575172 MHz
+
+
 Frequency: 200 MHz -> Synthesis: 34 s
 Frequency: 200 MHz -> Implementation: 42 s
 Frequency: 200 MHz -> Power: 0.136 W
+Frequency: 200 MHz -> Used Slice LUTs: 570
+Frequency: 200 MHz -> Used Slice Registers: 304
 Frequency: 200 MHz -> WNS: -2.200 ns
+Frequency: 200 MHz -> Achieved Frequency: 138.88888888888889 MHz
+
+

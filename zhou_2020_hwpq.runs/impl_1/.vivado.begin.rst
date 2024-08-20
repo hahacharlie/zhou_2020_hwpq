@@ -1,155 +1,80 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="755718" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="37830" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="774651" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="55765" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="792272" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="73694" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="810169" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="91500" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="827969" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="109495" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="845815" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="127327" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="863588" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="145158" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="881424" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="163111" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="899207" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="181233" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="916852" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="201395" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="934523" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="224979" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="952216" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="252906" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="970026" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="287274" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="987838" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="321407" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1005807" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="356254" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1023746" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1042529" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1062573" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1081625" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1104818" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1131260" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1158946" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1191675" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1225924" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1259881" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1294012" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1329208" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1363896" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1397612" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1430973" HostCore="12" HostMemory="32699516">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="1464779" HostCore="12" HostMemory="32699516">
+    <Process Command="vivado" Owner="charlie" Host="archlinux" Pid="389472" HostCore="12" HostMemory="32699520">
     </Process>
 </ProcessHandle>

@@ -31,7 +31,10 @@ def parse_data_from_file(file_path):
     synthesis_times = []
     implementation_times = []
     power_values = []
+    used_slice_luts = []
+    used_slice_registers = []
     wns_values = []
+    achieved_frequencies = []
 
     with open(file_path, "r") as file:
         for line in file:
@@ -49,8 +52,26 @@ def parse_data_from_file(file_path):
             elif "Frequency" in line and "WNS" in line:
                 wns_part = line.split("->")[1].strip().split(" ")[1]
                 wns_values.append(float(wns_part))
+            elif "Frequency" in line and "Used Slice LUTs" in line:
+                luts_part = line.split("->")[1].strip().split(" ")[3]
+                used_slice_luts.append(float(luts_part))
+            elif "Frequency" in line and "Used Slice Registers" in line:
+                registers_part = line.split("->")[1].strip().split(" ")[3]
+                used_slice_registers.append(float(registers_part))
+            elif "Frequency" in line and "Achieved Frequency" in line:
+                achieved_freq_part = line.split("->")[1].strip().split(" ")[2]
+                achieved_frequencies.append(float(achieved_freq_part))
 
-    return frequencies, synthesis_times, implementation_times, power_values, wns_values
+    return (
+        frequencies,
+        synthesis_times,
+        implementation_times,
+        power_values,
+        wns_values,
+        used_slice_luts,
+        used_slice_registers,
+        achieved_frequencies,
+    )
 
 
 # File path placeholder, this would be the path to the user's text file
@@ -59,12 +80,19 @@ file_path = (
 )
 
 # Parse the data from the file
-frequencies, synthesis_times, implementation_times, power_values, wns_values = (
-    parse_data_from_file(file_path)
-)
+(
+    frequencies,
+    synthesis_times,
+    implementation_times,
+    power_values,
+    wns_values,
+    used_slice_luts,
+    used_slice_registers,
+    achieved_frequencies,
+) = parse_data_from_file(file_path)
 
 # Plotting all metrics in a single figure with 4 subplots
-fig, axs = plt.subplots(2, 2, figsize=(14, 10))
+fig, axs = plt.subplots(4, 2, figsize=(14, 10))
 
 # Plotting Frequency vs Synthesis Time
 axs[0, 0].plot(frequencies, synthesis_times, marker="o")
@@ -93,6 +121,27 @@ axs[1, 1].set_xlabel("Frequency (MHz)")
 axs[1, 1].set_ylabel("WNS (ns)")
 axs[1, 1].set_title("WNS vs Frequency")
 axs[1, 1].grid(True)
+
+# Plotting Frequency vs Used Slice LUTs
+axs[2, 0].plot(frequencies, used_slice_luts, marker="o")
+axs[2, 0].set_xlabel("Frequency (MHz)")
+axs[2, 0].set_ylabel("Used Slice LUTs")
+axs[2, 0].set_title("Used Slice LUTs vs Frequency")
+axs[2, 0].grid(True)
+
+# Plotting Frequency vs Used Slice Registers
+axs[2, 1].plot(frequencies, used_slice_registers, marker="o")
+axs[2, 1].set_xlabel("Frequency (MHz)")
+axs[2, 1].set_ylabel("Used Slice Registers")
+axs[2, 1].set_title("Used Slice Registers vs Frequency")
+axs[2, 1].grid(True)
+
+# Plotting Frequency vs Achieved Frequency
+axs[3, 0].plot(frequencies, achieved_frequencies, marker="o")
+axs[3, 0].set_xlabel("Frequency (MHz)")
+axs[3, 0].set_ylabel("Achieved Frequency (MHz)")
+axs[3, 0].set_title("Achieved Frequency vs Frequency")
+axs[3, 0].grid(True)
 
 # Adjust layout to prevent overlap
 plt.tight_layout()

@@ -10,7 +10,7 @@ set log_file "pq_analysis.txt"
 set fileId [open $log_file "w"]
 
 # Loop through the list of frequencies
-for {set freq 50} {$freq <= 200} {incr freq 5} {
+for {set freq 50} {$freq <= 200} {incr freq 10} {
 
     # Calculate clock period in nanoseconds
     set period_ns [expr 1000.0 / $freq]
@@ -48,6 +48,26 @@ for {set freq 50} {$freq <= 200} {incr freq 5} {
     # Open the implementation result
     open_run impl_1
 
+    # Report utilization summary and get the total utilization
+    # report_utilization -file utilization_report_${freq}.txt
+
+    # Extract the utilization report content
+    set utilization_report [report_utilization -return_string]
+
+    # Initialize variables to store the extracted values
+    set used_slice_luts 0
+    set used_slice_registers 0
+
+    # Extract the used Slice LUTs and Slice Registers from the report
+    foreach line [split $utilization_report "\n"] {
+        if {[regexp {Slice LUTs\s*\|\s*([0-9]+)} $line match luts]} {
+            set used_slice_luts $luts
+        }
+        if {[regexp {Slice Registers\s*\|\s*([0-9]+)} $line match registers]} {
+            set used_slice_registers $registers
+        }
+    }
+
     # Report power summary and get the total on-chip power
     set power_report [report_power -return_string]
     set match [regexp {\|\s*Total On-Chip Power \(W\)\s*\|\s*([0-9\.]+)\s*\|} $power_report full_match total_on_chip_power]
@@ -58,6 +78,9 @@ for {set freq 50} {$freq <= 200} {incr freq 5} {
     # Extract WNS from the timing summary
     set wns [get_property SLACK [get_timing_paths]]
 
+    # Calculate the achieved frequency using WNS and target frequency
+    set achieved_frequency [format "%.3f" [expr {1000.0 / ($period_ns - $wns)}]]
+
     # Print the results to the log file
     puts $fileId "Frequency: ${freq} MHz -> Synthesis: ${synth_duration} s"
     puts $fileId "Frequency: ${freq} MHz -> Implementation: ${impl_duration} s"
@@ -66,7 +89,10 @@ for {set freq 50} {$freq <= 200} {incr freq 5} {
     } else {
         puts $fileId "Frequency: ${freq} MHz -> Power: No power report"
     }
+    puts $fileId "Frequency: ${freq} MHz -> Used Slice LUTs: ${used_slice_luts}"
+    puts $fileId "Frequency: ${freq} MHz -> Used Slice Registers: ${used_slice_registers}"
     puts $fileId "Frequency: ${freq} MHz -> WNS: ${wns} ns"
+    puts $fileId "Frequency: ${freq} MHz -> Achieved Frequency: ${achieved_frequency} MHz"
     puts $fileId "\n"
 }
 
