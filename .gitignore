@@ -1,6 +1,6 @@
 .vscode
 chat.rapidgpt
 .Xil
-# *.jou
-# *.log
-# .jobs
+*.jou
+*.log
+.jobs

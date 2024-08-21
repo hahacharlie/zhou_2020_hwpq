@@ -35,7 +35,6 @@ def parse_data_from_file(file_path):
     used_slice_registers = []
     wns_values = []
     achieved_frequencies = []
-    queue_sizes = []
 
     with open(file_path, "r") as file:
         for line in file:
@@ -62,9 +61,6 @@ def parse_data_from_file(file_path):
             elif "Frequency" in line and "Achieved Frequency" in line:
                 achieved_freq_part = line.split("->")[1].strip().split(" ")[2]
                 achieved_frequencies.append(float(achieved_freq_part))
-            elif "Frequency" in line and "Queue Size" in line:
-                queue_size_part = line.split("->")[1].strip().split(" ")[2]
-                queue_sizes.append(float(queue_size_part))
 
     return (
         frequencies,
@@ -75,7 +71,6 @@ def parse_data_from_file(file_path):
         used_slice_luts,
         used_slice_registers,
         achieved_frequencies,
-        queue_sizes,
     )
 
 
@@ -148,13 +143,6 @@ axs[3, 0].set_xlabel("Frequency (MHz)")
 axs[3, 0].set_ylabel("Achieved Frequency (MHz)")
 axs[3, 0].set_title("Achieved Frequency vs Frequency")
 axs[3, 0].grid(True)
-
-# Plotting Frequency vs Queue Size
-axs[3, 1].plot(frequencies, queue_sizes, marker="o")
-axs[3, 1].set_xlabel("Frequency (MHz)")
-axs[3, 1].set_ylabel("Queue Size")
-axs[3, 1].set_title("Queue Size vs Frequency")
-axs[3, 1].grid(True)
 
 # Adjust layout to prevent overlap
 plt.tight_layout()
