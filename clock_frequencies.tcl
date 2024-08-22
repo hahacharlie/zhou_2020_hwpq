@@ -5,14 +5,10 @@ open_project ./zhou_2020_hwpq.xpr
 set top_module "open_list_queue"
 set clock_port "CLK"
 
-# Define the log file with a unique name based on powers of 2, starting with 4
-if {![info exists ::log_file_counter]} {
-    set ::log_file_counter 4
-} else {
-    set ::log_file_counter [expr {$::log_file_counter * 2}]
-}
-set log_file "zhou_2020_hwpq.logs/pq_analysis_$::log_file_counter.txt"
-set fileId [open $log_file "w"]
+# Define the log file with a unique name based on the current timestamp
+# set timestamp [clock format [clock seconds] -format "%Y%m%d_%H%M%S"]
+set log_file "zhou_2020_hwpq.logs/pq_analysis_4.txt"
+set fileId [open $log_file "a"]
 
 # Loop through the list of frequencies
 for {set freq 50} {$freq <= 200} {incr freq 10} {
@@ -54,19 +50,22 @@ for {set freq 50} {$freq <= 200} {incr freq 10} {
     open_run impl_1
 
     # Extract the utilization report content
+    # report_utilization -file utilization_${freq}.txt
+
+    # # Extract the utilization report content
     set utilization_report [report_utilization -return_string]
 
     # Initialize variables to store the extracted values
-    set used_slice_luts 0
-    set used_slice_registers 0
+    set slice_luts_util 0.0
+    set slice_registers_util 0.0
 
-    # Extract the used Slice LUTs and Slice Registers from the report
+    # Extract the Util% of Slice LUTs and Slice Registers from the report
     foreach line [split $utilization_report "\n"] {
-        if {[regexp {Slice LUTs\s*\|\s*([0-9]+)} $line match luts]} {
-            set used_slice_luts $luts
+        if {[regexp {Slice LUTs\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*([0-9\.]+)} $line match luts_util]} {
+            set slice_luts_util $luts_util
         }
-        if {[regexp {Slice Registers\s*\|\s*([0-9]+)} $line match registers]} {
-            set used_slice_registers $registers
+        if {[regexp {Slice Registers\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*([0-9\.]+)} $line match registers_util]} {
+            set slice_registers_util $registers_util
         }
     }
 
@@ -80,8 +79,8 @@ for {set freq 50} {$freq <= 200} {incr freq 10} {
     # Extract WNS from the timing summary
     set wns [get_property SLACK [get_timing_paths]]
 
-    # Calculate the achieved frequency using WNS and target frequency
-    set achieved_frequency [expr {1000.0 / ($period_ns - $wns)}]
+    # Calculate the achieved frequency using WNS and target frequency with 3 significant digits
+    set achieved_frequency [format "%.3f" [expr {1000.0 / ($period_ns - $wns)}]]
 
     # Print the results to the log file
     puts $fileId "Frequency: ${freq} MHz -> Synthesis: ${synth_duration} s"
@@ -91,9 +90,8 @@ for {set freq 50} {$freq <= 200} {incr freq 10} {
     } else {
         puts $fileId "Frequency: ${freq} MHz -> Power: No power report"
     }
-    puts $fileId "Frequency: ${freq} MHz -> Queue Size: ${queue_size}"
-    puts $fileId "Frequency: ${freq} MHz -> Used Slice LUTs: ${used_slice_luts}"
-    puts $fileId "Frequency: ${freq} MHz -> Used Slice Registers: ${used_slice_registers}"
+    puts $fileId "Frequency: ${freq} MHz -> Slice LUTs Util%: ${slice_luts_util} %"
+    puts $fileId "Frequency: ${freq} MHz -> Slice Registers Util%: ${slice_registers_util} %"
     puts $fileId "Frequency: ${freq} MHz -> WNS: ${wns} ns"
     puts $fileId "Frequency: ${freq} MHz -> Achieved Frequency: ${achieved_frequency} MHz"
     puts $fileId "\n"

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Aug 20 20:25:15 2024
-# Process ID: 478274
+# Start of session at: Wed Aug 21 15:10:48 2024
+# Process ID: 4001121
 # Current directory: /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.runs/synth_1
 # Command line: vivado -log open_list_queue.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source open_list_queue.tcl
 # Log file: /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.runs/synth_1/open_list_queue.vds
@@ -13,12 +13,12 @@
 # Platform          :Arch
 # Operating System  :Arch Linux
 # Processor Detail  :12th Gen Intel(R) Core(TM) i5-12400F
-# CPU Frequency     :4224.792 MHz
+# CPU Frequency     :4330.956 MHz
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :33484 MB
 # Swap memory       :4294 MB
 # Total Virtual     :37779 MB
-# Available Virtual :29066 MB
+# Available Virtual :19607 MB
 #-----------------------------------------------------------
 source open_list_queue.tcl -notrace
