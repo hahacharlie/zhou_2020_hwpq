@@ -1,22 +1,25 @@
 import os
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def parse_achieved_frequencies(file_path):
     """
-    Parse achieved frequency data from a file.
-
-    This function reads a file containing achieved frequency data in the format:
-    "Frequency: X MHz -> Achieved Frequency: Y MHz"
-    It extracts these values and returns them as separate lists.
+    Parses a log file to extract frequencies and their corresponding achieved frequencies.
 
     Args:
-        file_path (str): The path to the file containing the data.
+        file_path (str): The path to the log file.
 
     Returns:
-        tuple: A tuple containing two lists:
-            - frequencies (list of float): The parsed frequency values in MHz.
-            - achieved_frequencies (list of float): The parsed achieved frequency values in MHz.
+        tuple: Two lists, the first containing the frequencies and the second containing the achieved frequencies.
+
+    Example:
+        Given a log file with the following content:
+            Frequency: 150 MHz -> Achieved Frequency: 138.242 MHz
+            Frequency: 160 MHz -> Achieved Frequency: 143.205 MHz
+
+        The function will return:
+            ([150.0, 160.0], [138.242, 143.205])
     """
     frequencies = []
     achieved_frequencies = []
@@ -30,6 +33,27 @@ def parse_achieved_frequencies(file_path):
                 achieved_frequencies.append(float(achieved_freq_part))
 
     return frequencies, achieved_frequencies
+
+
+def extrapolate_final_achieved_frequency(achieved_frequencies, num_points=3):
+    """
+    Extrapolates the final achieved frequency by averaging the last few points.
+
+    Args:
+        achieved_frequencies (list): A list of achieved frequencies.
+        num_points (int, optional): The number of points to consider for averaging. Defaults to 3.
+
+    Returns:
+        float: The extrapolated final achieved frequency.
+
+    Example:
+        Given achieved_frequencies = [138.242, 143.205, 134.132, 138.035, 138.290, 138.889]
+        and num_points = 3, the function will return the average of the last 3 points:
+            (138.035 + 138.290 + 138.889) / 3 = 138.40466666666667
+    """
+    if len(achieved_frequencies) < num_points:
+        return np.mean(achieved_frequencies)
+    return np.mean(achieved_frequencies[-num_points:])
 
 
 # Directory containing the log files
@@ -63,6 +87,30 @@ plt.xlabel("Frequency (MHz)")
 plt.ylabel("Achieved Frequency (MHz)")
 plt.title("Achieved Frequency vs Frequency for Different QUEUE_SIZE")
 plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# Dictionary to store final achieved frequencies for each queue size
+final_achieved_frequencies = {}
+
+# Iterate over all data to find the final achieved frequency for each queue size
+for queue_size, (frequencies, achieved_frequencies) in all_data.items():
+    final_achieved_frequency = extrapolate_final_achieved_frequency(
+        achieved_frequencies
+    )
+    final_achieved_frequencies[queue_size] = final_achieved_frequency
+
+# Plot the final achieved frequencies for each queue size
+plt.figure(figsize=(10, 6))
+
+queue_sizes = list(final_achieved_frequencies.keys())
+final_frequencies = list(final_achieved_frequencies.values())
+
+plt.plot(queue_sizes, final_frequencies, marker="o")
+plt.xlabel("Queue Size")
+plt.ylabel("Final Achieved Frequency (MHz)")
+plt.title("Final Achieved Frequency vs Queue Size")
 plt.grid(True)
 plt.tight_layout()
 plt.show()

@@ -1,0 +1,11 @@
+Log for QUEUE_SIZE = 128
+
+Frequency: 300 MHz -> Synthesis: 1m 31s
+Frequency: 300 MHz -> Implementation: 5m 48s
+Frequency: 300 MHz -> Power: 4.506 W
+Frequency: 300 MHz -> LUTs Util%: 1.13 %
+Frequency: 300 MHz -> Registers Util%: 0.25 %
+Frequency: 300 MHz -> WNS: -5.728 ns
+Frequency: 300 MHz -> Achieved Frequency: 110.359 MHz
+
+
