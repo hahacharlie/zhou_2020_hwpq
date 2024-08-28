@@ -5,7 +5,7 @@ open_project ./zhou_2020_hwpq.xpr
 set top_module "open_list_queue"
 set clock_port "CLK"
 
-set log_file "zhou_2020_hwpq.logs/pq_analysis_256.txt"
+set log_file "zhou_2020_hwpq.logs/pq_analysis_1024.txt"
 set fileId [open $log_file "a"]
 
 # Loop through the list of frequencies
@@ -28,9 +28,9 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
     if {$synth_duration > 60} {
         set minutes [expr int($synth_duration / 60)]
         set seconds [expr $synth_duration % 60]
-        set synth_duration "${minutes}m ${seconds}s"
+        set synth_duration_str "${minutes}m ${seconds}s"
     } else {
-        set synth_duration "${synth_duration}s"
+        set synth_duration_str "${synth_duration}s"
     }
 
     # Open the synthesis result
@@ -53,9 +53,9 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
     if {$impl_duration > 60} {
         set minutes [expr int($impl_duration / 60)]
         set seconds [expr $impl_duration % 60]
-        set impl_duration "${minutes}m ${seconds}s"
+        set impl_duration_str "${minutes}m ${seconds}s"
     } else {
-        set impl_duration "${impl_duration}s"
+        set impl_duration_str "${impl_duration}s"
     }
 
     # Open the implementation result
@@ -66,10 +66,6 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
 
     # Extract the utilization report content
     set utilization_report [report_utilization -return_string]
-
-    # Initialize variables to store the extracted values
-    # set clb_luts_util 0.0
-    # set clb_registers_util 0.0
 
     # Extract the Util% of CLB LUTs and CLB Registers from the report
     set in_section_1 0
@@ -83,9 +79,6 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
         if {$in_section_1} {
             if {[regexp {\|\s*CLB LUTs\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*([0-9]+\.[0-9]+)\s*\|} $line match luts_util]} {
                 set clb_luts_util $luts_util
-            }
-            if {[regexp {\|\s*CLB Registers\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*[0-9]+\s*\|\s*([0-9]+\.[0-9]+)\s*\|} $line match registers_util]} {
-                set clb_registers_util $registers_util
             }
         }
     }
@@ -104,19 +97,26 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
     set achieved_frequency [format "%.3f" [expr {1000.0 / ($period_ns - $wns)}]]
 
     # Print the results to the log file
-    puts $fileId "Frequency: ${freq} MHz -> Synthesis: ${synth_duration}"
-    puts $fileId "Frequency: ${freq} MHz -> Implementation: ${impl_duration}"
+    puts $fileId "Frequency: ${freq} MHz -> Synthesis: ${synth_duration_str} -> ${synth_duration}s"
+    puts $fileId "Frequency: ${freq} MHz -> Implementation: ${impl_duration_str} -> ${impl_duration}s"
     if ($match) {
         puts $fileId "Frequency: ${freq} MHz -> Power: ${total_on_chip_power} W"
     } else {
         puts $fileId "Frequency: ${freq} MHz -> Power: No power report"
     }
     puts $fileId "Frequency: ${freq} MHz -> LUTs Util%: ${clb_luts_util} %"
-    puts $fileId "Frequency: ${freq} MHz -> Registers Util%: ${clb_registers_util} %"
     puts $fileId "Frequency: ${freq} MHz -> WNS: ${wns} ns"
     puts $fileId "Frequency: ${freq} MHz -> Achieved Frequency: ${achieved_frequency} MHz"
     puts $fileId "\n"
 
+    # Exit the loop if WNS has passed the threshold of -2 ns, or if the implementation time is greater than 15 minutes, or if the Util% of CLB LUTs is greater than 50%, and state in the log file
+    if {$wns < -2.0} {
+        puts $fileId "WNS exceeded -2 ns, finished"
+        break
+    } elseif {$clb_luts_util > 50.0} {
+        puts $fileId "CLB LUTs Util% exceeded 50%, finished"
+        break
+    }
 }
 
 # Close the log file

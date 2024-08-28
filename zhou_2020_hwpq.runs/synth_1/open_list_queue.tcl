@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.runs/synth_1/open_list_queue.tcl"
+  variable script "/home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.runs/synth_1/open_list_queue.tcl"
   variable category "vivado_synth"
 }
 
@@ -62,15 +62,15 @@ create_project -in_memory -part xcu250-figd2104-2L-e
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.cache/wt [current_project]
-set_property parent.project_path /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.xpr [current_project]
+set_property webtalk.parent_dir /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.cache/wt [current_project]
+set_property parent.project_path /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.cache/ip [current_project]
+set_property ip_output_repo /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.srcs/sources_1/imports/my_hwpq/open_list_queue.sv
+read_verilog -library xil_defaultlib -sv /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.srcs/sources_1/imports/my_hwpq/open_list_queue.sv
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -80,12 +80,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
-set_property used_in_implementation false [get_files /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
+read_xdc /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
+set_property used_in_implementation false [get_files /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.srcs/utils_1/imports/synth_1/open_list_queue.dcp
+read_checkpoint -auto_incremental -incremental /home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.srcs/utils_1/imports/synth_1/open_list_queue.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
