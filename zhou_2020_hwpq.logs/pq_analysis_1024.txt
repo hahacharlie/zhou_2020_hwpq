@@ -1,2 +1,9 @@
-Log for QUEUE_SIZE = 1024
+Frequency: 50 MHz -> Synthesis: 7m 16s -> 436s
+Frequency: 50 MHz -> Implementation: 16m 38s -> 998s
+Frequency: 50 MHz -> Power: 4.986 W
+Frequency: 50 MHz -> LUTs Util%: 9.06 %
+Frequency: 50 MHz -> WNS: -58.537 ns
+Frequency: 50 MHz -> Achieved Frequency: 12.733 MHz
 
+
+WNS exceeded -2 ns, finished

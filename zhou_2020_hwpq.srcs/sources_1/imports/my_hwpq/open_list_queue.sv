@@ -4,7 +4,7 @@
 `timescale 1ns / 1ps
 
 module open_list_queue #(
-    parameter QUEUE_SIZE = 1024,  // Number of slots in each queue
+    parameter QUEUE_SIZE = 8,  // Number of slots in each queue
     parameter DATA_WIDTH = 32,  // Data width for node f values
     parameter MAP_WIDTH = 16,  // Width of the map
     parameter MAP_HEIGHT = 16,  // Height of the map

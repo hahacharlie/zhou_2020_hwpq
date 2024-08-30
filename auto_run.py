@@ -1,5 +1,6 @@
 import os
 import subprocess
+import time
 
 
 def run_vivado_tcl_script():
@@ -43,7 +44,7 @@ def main():
     #         os.remove(file_path)
 
     # List of new QUEUE_SIZE values
-    queue_sizes = [64, 128, 256, 512, 1024, 2048, 4096]
+    queue_sizes = [4, 8, 16, 32, 64, 128, 256, 512, 1024]
 
     for size in queue_sizes:
         # Create a log file for the current QUEUE_SIZE
@@ -71,6 +72,9 @@ def main():
 
         # Rerun the Vivado TCL script
         run_vivado_tcl_script()
+
+        # Sleep for 1 minute
+        time.sleep(60)
 
 
 if __name__ == "__main__":

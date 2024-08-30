@@ -1,12 +1,12 @@
 # Open the project (you may need to adjust the project path)
-open_project ./zhou_2020_hwpq.xpr
+# open_project ./zhou_2020_hwpq.xpr
 
 # Define the design top level and clock signal
 set top_module "open_list_queue"
 set clock_port "CLK"
 
-set log_file "zhou_2020_hwpq.logs/pq_analysis_1024.txt"
-set fileId [open $log_file "a"]
+set log_file "zhou_2020_hwpq.logs/pq_analysis_8.txt"
+set fileId [open $log_file "w"]
 
 # Loop through the list of frequencies
 for {set freq 50} {$freq <= 400} {incr freq 10} {
@@ -19,7 +19,7 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
 
     # Start a new synthesis and time how long it takes
     set synth_start_time [clock seconds]
-    launch_runs synth_1 -jobs 12
+    launch_runs synth_1
     wait_on_run synth_1
     set synth_end_time [clock seconds]
 
@@ -44,7 +44,7 @@ for {set freq 50} {$freq <= 400} {incr freq 10} {
 
     # Start a new implementation run and time how long it takes
     set impl_start_time [clock seconds]
-    launch_runs impl_1 -jobs 12
+    launch_runs impl_1
     wait_on_run impl_1
     set impl_end_time [clock seconds]
 

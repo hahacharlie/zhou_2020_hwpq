@@ -15,4 +15,4 @@ Read data:          7
 Read data:         10
 Read data:         11
 Read data:         14
-$finish called at time : 425 ns : File "//psf/Home/Documents/Vivado/zhou_2020_hwpq/zhou_2020_hwpq.srcs/sim_1/imports/my_hwpq/tb_open_list_queue.sv" Line 92
+$finish called at time : 425 ns : File "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.srcs/sim_1/imports/my_hwpq/tb_open_list_queue.sv" Line 92

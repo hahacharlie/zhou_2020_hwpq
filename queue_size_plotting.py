@@ -45,11 +45,11 @@ def parse_data_from_file(file_path):
         for line in file:
             if "Frequency" in line and "Synthesis" in line:
                 freq_part = line.split("->")[0].strip().split(" ")[1]
-                synth_part = line.split("->")[1].strip().split(" ")[1][:-1]
+                synth_part = line.split("->")[2].strip().split(" ")[0][:-1]
                 frequencies.append(float(freq_part))
                 synthesis_times.append(float(synth_part))
             elif "Frequency" in line and "Implementation" in line:
-                impl_part = line.split("->")[1].strip().split(" ")[1][:-1]
+                impl_part = line.split("->")[2].strip().split(" ")[0][:-1]
                 implementation_times.append(float(impl_part))
             elif "Frequency" in line and "Power" in line:
                 power_part = line.split("->")[1].strip().split(" ")[1]
@@ -76,9 +76,7 @@ def parse_data_from_file(file_path):
 
 
 # File path placeholder, this would be the path to the user's text file
-file_path = (
-    "/home/charlie-wu/Workspace/zhou_2020_hwpq/zhou_2020_hwpq.logs/pq_analysis_32.txt"
-)
+file_path = "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.logs/pq_analysis_256.txt"
 
 # Parse the data from the file
 (
@@ -138,4 +136,4 @@ axs[2, 1].grid(True)
 
 # Adjust layout to prevent overlap
 plt.tight_layout()
-plt.savefig("zhou_2020_hwpq.plots/new_queue_size_plot.png")
+plt.savefig("zhou_2020_hwpq.plots/pq_analysis_queue_size_256_UltraScale+.png")
