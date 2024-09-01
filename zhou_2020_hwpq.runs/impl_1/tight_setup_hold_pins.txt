@@ -1,0 +1,39 @@
++====================+===================+=========================+
+| Launch Setup Clock | Launch Hold Clock | Pin                     |
++====================+===================+=========================+
+| sys_clk            | sys_clk           | outQueue_reg[217][24]/D |
+| sys_clk            | sys_clk           | outQueue_reg[217][13]/D |
+| sys_clk            | sys_clk           | outQueue_reg[218][24]/D |
+| sys_clk            | sys_clk           | outQueue_reg[216][21]/D |
+| sys_clk            | sys_clk           | outQueue_reg[213][5]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[213][1]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[215][17]/D |
+| sys_clk            | sys_clk           | outQueue_reg[212][30]/D |
+| sys_clk            | sys_clk           | outQueue_reg[188][10]/D |
+| sys_clk            | sys_clk           | outQueue_reg[188][12]/D |
+| sys_clk            | sys_clk           | outQueue_reg[176][2]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[91][9]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[78][13]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[78][25]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[82][6]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[82][7]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[76][1]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[76][16]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[78][22]/D  |
+| sys_clk            | sys_clk           | outQueueValid_reg[81]/D |
+| sys_clk            | sys_clk           | outQueue_reg[79][22]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[79][6]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[79][13]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[79][3]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[79][28]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[75][26]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[75][20]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[80][11]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[66][26]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[66][27]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[66][17]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[65][4]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[65][6]/D   |
+| sys_clk            | sys_clk           | outQueue_reg[65][28]/D  |
+| sys_clk            | sys_clk           | outQueue_reg[65][8]/D   |
++--------------------+-------------------+-------------------------+

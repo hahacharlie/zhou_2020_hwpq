@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Aug 29 12:23:28 2024
+| Date         : Fri Aug 30 17:24:55 2024
 | Host         : archlinux running 64-bit Arch Linux
 | Command      : report_utilization -file open_list_queue_utilization_synth.rpt -pb open_list_queue_utilization_synth.pb
 | Design       : open_list_queue
@@ -32,20 +32,20 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 1228 |     0 |          0 |   1728000 |  0.07 |
-|   LUT as Logic          | 1228 |     0 |          0 |   1728000 |  0.07 |
-|   LUT as Memory         |    0 |     0 |          0 |    791040 |  0.00 |
-| CLB Registers           |  534 |     0 |          0 |   3456000 |  0.02 |
-|   Register as Flip Flop |  534 |     0 |          0 |   3456000 |  0.02 |
-|   Register as Latch     |    0 |     0 |          0 |   3456000 |  0.00 |
-| CARRY8                  |   74 |     0 |          0 |    216000 |  0.03 |
-| F7 Muxes                |    0 |     0 |          0 |    864000 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |    432000 |  0.00 |
-| F9 Muxes                |    0 |     0 |          0 |    216000 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++-------------------------+-------+-------+------------+-----------+-------+
+|        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
++-------------------------+-------+-------+------------+-----------+-------+
+| CLB LUTs*               | 39083 |     0 |          0 |   1728000 |  2.26 |
+|   LUT as Logic          | 39083 |     0 |          0 |   1728000 |  2.26 |
+|   LUT as Memory         |     0 |     0 |          0 |    791040 |  0.00 |
+| CLB Registers           | 16907 |     0 |          0 |   3456000 |  0.49 |
+|   Register as Flip Flop | 16907 |     0 |          0 |   3456000 |  0.49 |
+|   Register as Latch     |     0 |     0 |          0 |   3456000 |  0.00 |
+| CARRY8                  |  2558 |     0 |          0 |    216000 |  1.18 |
+| F7 Muxes                |     0 |     0 |          0 |    864000 |  0.00 |
+| F8 Muxes                |     0 |     0 |          0 |    432000 |  0.00 |
+| F9 Muxes                |     0 |     0 |          0 |    216000 |  0.00 |
++-------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
@@ -65,8 +65,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 512   |          Yes |         Set |            - |
-| 22    |          Yes |       Reset |            - |
+| 16384 |          Yes |         Set |            - |
+| 523   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -156,23 +156,23 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 8. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| LUT4     | 1259 |                 CLB |
-| FDSE     |  512 |            Register |
-| LUT5     |  459 |                 CLB |
-| LUT6     |   75 |                 CLB |
-| CARRY8   |   74 |                 CLB |
-| LUT3     |   53 |                 CLB |
-| OBUF     |   38 |                 I/O |
-| INBUF    |   36 |                 I/O |
-| IBUFCTRL |   36 |              Others |
-| FDRE     |   22 |            Register |
-| LUT2     |    3 |                 CLB |
-| LUT1     |    2 |                 CLB |
-| BUFGCE   |    1 |               Clock |
-+----------+------+---------------------+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LUT4     | 41458 |                 CLB |
+| LUT5     | 16479 |                 CLB |
+| FDSE     | 16384 |            Register |
+| CARRY8   |  2558 |                 CLB |
+| LUT3     |   940 |                 CLB |
+| LUT6     |   878 |                 CLB |
+| FDRE     |   523 |            Register |
+| LUT2     |    99 |                 CLB |
+| OBUF     |    38 |                 I/O |
+| INBUF    |    36 |                 I/O |
+| IBUFCTRL |    36 |              Others |
+| LUT1     |     2 |                 CLB |
+| BUFGCE   |     1 |               Clock |
++----------+-------+---------------------+
 
 
 9. Black Boxes

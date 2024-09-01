@@ -56,9 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param ced.repoPaths /home/charlie/Tools/Xilinx/Downloads/ced_store/Vivado_example_project
 set_param power.BramSDPPropagationFix 1
-set_param chipscope.maxJobs 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
@@ -95,7 +93,7 @@ read_checkpoint -auto_incremental -incremental /home/charlie/Workspace/pq_resear
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top open_list_queue -part xcu250-figd2104-2L-e
+synth_design -top open_list_queue -part xcu250-figd2104-2L-e -bufg 8
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

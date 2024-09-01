@@ -1,5 +1,5 @@
 # Open the project (you may need to adjust the project path)
-# open_project ./zhou_2020_hwpq.xpr
+open_project ./zhou_2020_hwpq.xpr
 
 # Define the design top level and clock signal
 set top_module "open_list_queue"
@@ -10,7 +10,6 @@ set fileId [open $log_file "w"]
 
 # Loop through the list of frequencies
 for {set freq 50} {$freq <= 400} {incr freq 10} {
-
     # Calculate clock period in nanoseconds
     set period_ns [expr 1000.0 / $freq]
 

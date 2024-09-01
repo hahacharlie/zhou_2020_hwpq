@@ -21,19 +21,25 @@
 # set clock_period 8.33;
 
 # 130 MHz = 7.69ns
-# set clock_period 7.69
+# set clock_period 7.69;
 
 # 135 MHz = 7.41ns
 # set clock_period 7.41;
 
 # 140 MHz = 7.14ns
-# set clock_period 7.14
+# set clock_period 7.14;
+
+# 200 MHz = 5ns
+set clock_period 5;
+
+# 300 MHz = 3.33ns
+# set clock_period 3.33;
 
 # set the % of clock to limit the IO timing
 # set clk_io_pct 0.30;
 
 # create the system clock with name
-# create_clock -name sys_clk -period $clock_period [get_ports CLK];
+create_clock -name sys_clk -period $clock_period [get_ports CLK];
 
 # set the input delay
 # set_input_delay -clock sys_clk [expr $clock_period * $clk_io_pct] [get_ports -filter {DIRECTION == IN && NAME !~ "*CLK*"}];

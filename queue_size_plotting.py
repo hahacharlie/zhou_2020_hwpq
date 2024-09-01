@@ -76,7 +76,7 @@ def parse_data_from_file(file_path):
 
 
 # File path placeholder, this would be the path to the user's text file
-file_path = "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.logs/pq_analysis_256.txt"
+file_path = "/home/charlie/Workspace/pq_research/vivado_dir/zhou_2020_hwpq/zhou_2020_hwpq.logs/pq_analysis_8.txt"
 
 # Parse the data from the file
 (
@@ -136,4 +136,4 @@ axs[2, 1].grid(True)
 
 # Adjust layout to prevent overlap
 plt.tight_layout()
-plt.savefig("zhou_2020_hwpq.plots/pq_analysis_queue_size_256_UltraScale+.png")
+plt.savefig("zhou_2020_hwpq.plots/pq_analysis_queue_size_8_UltraScale+.png")
